@@ -6,6 +6,6 @@ export default {
   plugins: [require("daisyui")], // ✅ enable daisyUI
   // Optional: pick specific themes or keep default set
   daisyui: {
-    themes: ["light", "dark", "cupcake"],
+    themes: ["light", "dark", "cupcake","retro"],
   },
 }
