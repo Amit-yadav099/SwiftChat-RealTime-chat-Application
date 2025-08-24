@@ -19,7 +19,7 @@ export const getUsersForSidebar = async (req, res) => {
 export const getMessages = async (req, res) => {
   try {
     const { id: userToChatId } = req.params;
-    const myId = req.user._id;//sender id
+    const myId = req.user._id;
 
     const messages = await Message.find({
       $or: [
@@ -57,7 +57,6 @@ export const sendMessage = async (req, res) => {
 
     await newMessage.save();
 
-    //realTime functionality with teh help of the socket.io
     const receiverSocketId = getReceiverSocketId(receiverId);
     if (receiverSocketId) {
       io.to(receiverSocketId).emit("newMessage", newMessage);
