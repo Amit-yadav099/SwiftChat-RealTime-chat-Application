@@ -38,3 +38,4 @@ npm start
 ```
 
 Note:- newly Version module is not suggested to use with daisyui, as compatibility issue might occurs. 
+
